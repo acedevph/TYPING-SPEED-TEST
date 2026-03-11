@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button id="theme-toggle">🌙</button>
+
+    <div class="container">
+        <h1>Typing Speed Test</h1>
+
+        <div class="controls">
+            <label>Difficulty:</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+
+        <div class="quote-box">
+            <p id="quote"></p>
+        </div>
+
+        <textarea id="input-area" placeholder="Start typing here..." disabled></textarea>
+
+        <div class="stats">
+            <div><span id="wpm">0</span><p>WPM</p></div>
+            <div><span id="accuracy">0%</span><p>Accuracy</p></div>
+            <div><span id="mistakes">0</span><p>Mistakes</p></div>
+        </div>
+
+        <!-- Timer Bar -->
+        <div class="timer-container">
+            <div id="timer-bar"></div>
+        </div>
+        <p id="timer" class="timer-text">60s</p>
+
+        <button id="start-btn">Start Test</button>
+
+        <h2>🏆 Leaderboard</h2>
+        <ul id="leaderboard"></ul>
+    </div>
+
+    <!-- Sound Effects -->
+    <audio id="correct-sound" src="correct.wav"></audio>
+    <audio id="wrong-sound" src="wrong.wav"></audio>
+    <audio id="finish-sound" src="finish.wav"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+/* THEME VARIABLES */
+:root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --accent: #38bdf8;
+    --text: #ffffff;
+}
+
+.light {
+    --bg: #f8fafc;
+    --card: #e2e8f0;
+    --accent: #0ea5e9;
+    --text: #1e293b;
+}
+
+/* THEME TOGGLE */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--accent);
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 800px;
+    margin: 80px auto;
+    background: var(--card);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.controls select {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+.quote-box {
+    background: var(--bg);
+    padding: 20px;
+    min-height: 120px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+#quote span.correct { color: #10b981; }
+#quote span.incorrect { color: #ef4444; }
+#quote span.current { color: var(--accent); text-decoration: underline; }
+
+#input-area {
+    width: 100%;
+    height: 130px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background: var(--bg);
+    color: var(--text);
+    resize: none;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.stats div span {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+button {
+    background: var(--accent);
+    border: none;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#leaderboard {
+    margin-top: 20px;
+}
+
+#leaderboard li {
+    background: var(--bg);
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+/* TIMER PROGRESS BAR */
+.timer-container {
+    width: 100%;
+    height: 20px;
+    background: #334155;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+#timer-bar {
+    height: 100%;
+    width: 100%;
+    background: var(--accent);
+    transition: width 0.2s linear;
+}
+
+.timer-text {
+    text-align: right;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
